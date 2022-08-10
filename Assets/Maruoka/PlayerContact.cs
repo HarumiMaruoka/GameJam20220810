@@ -47,6 +47,7 @@ public class PlayerContact : MonoBehaviour
         // スコアアイテムに接触したらスコアを加算
         if (collision.tag == _scoreItemTagName)
         {
+            Destroy(collision.gameObject);
             ScoreManager._score += _scoreItemsScore;
         }
         // ゴールに接触したらリザルトシーンへ移行する

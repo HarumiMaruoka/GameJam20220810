@@ -12,7 +12,7 @@ public class ResultUI : MonoBehaviour
     Text[] _choices;
     int choiceNum = 0;
     //メインシーンから受け取るスコア変数(仮)
-    int score = 0;
+    int score = ScoreManager._score;
     void Start()
     {
         _result = GameObject.Find("ResultScore").GetComponent<Text>();
