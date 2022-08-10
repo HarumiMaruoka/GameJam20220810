@@ -10,9 +10,10 @@ public class PlayerContact : MonoBehaviour
     [Header("障害物オブジェクトのタグの名前"), SerializeField] string _obstacleTagName;
     [Header("スコアアイテムのタグの名前"), SerializeField] string _scoreItemTagName;
     [Header("ゴールオブジェクトのタグの名前"), SerializeField] string _gaolObjectTagName;
+    [Header("回復アイテムのタグの名前"), SerializeField] string _healItemTagName;
     [Header("リザルトシーンの名前"), SerializeField] string _resultSceneName;
 
-    [Header("ヒットポイント"), SerializeField] int _hitPoint;
+    [Header("最初のヒットポイント"), SerializeField] public int _hitPoint;
     [Header("ゴッドモード"), SerializeField] bool _isGodMode;
 
     [Header("エネミーヒット後のゴッドモード時間"), SerializeField] float _godModeTime;
@@ -50,8 +51,14 @@ public class PlayerContact : MonoBehaviour
             Destroy(collision.gameObject);
             ScoreManager._score += _scoreItemsScore;
         }
+        // 回復アイテムと接触した時の処理
+        else if (collision.tag == _healItemTagName)
+        {
+            Destroy(collision.gameObject);
+            _hitPoint++;
+        }
         // ゴールに接触したらリザルトシーンへ移行する
-        else if(collision.tag == _gaolObjectTagName)
+        else if (collision.tag == _gaolObjectTagName)
         {
             SceneManager.LoadScene(_resultSceneName);
         }
