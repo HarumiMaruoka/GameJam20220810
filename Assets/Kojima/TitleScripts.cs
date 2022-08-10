@@ -8,6 +8,7 @@ public class TitleScripts : MonoBehaviour
     //スタートボタンを選択で実行
     public void GameStart()
     {
+        ScoreManager._score = 0;
         SceneManager.LoadScene("GameScene");
     }
 
