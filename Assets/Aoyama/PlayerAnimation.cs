@@ -21,6 +21,8 @@ public class PlayerAnimation : MonoBehaviour
 
     bool _isChange;
 
+    bool _level2Trigger = true;
+    bool _level3Trigger = true;
 
     void Start()
     {
@@ -39,7 +41,7 @@ public class PlayerAnimation : MonoBehaviour
             AnimationControl(_level3);
         }
         else if (level > 0)
-        {           
+        {
             AnimationControl(_level2);
         }
         else
@@ -48,9 +50,14 @@ public class PlayerAnimation : MonoBehaviour
         }
 
 
-        if (!_isChange)
+        if (level > 1&& _level3Trigger)
         {
-            _isChange = true;
+            _level3Trigger = false;
+            _ps.Play();
+        }
+        else if (level > 0 && _level2Trigger)
+        {
+            _level2Trigger = false;
             _ps.Play();
         }
     }
@@ -58,7 +65,6 @@ public class PlayerAnimation : MonoBehaviour
     void AnimationControl(Sprite[] sprite)
     {
         float speedY = _rb.velocity.y;
-        Debug.Log(speedY);
 
         if (speedY != 0)
         {
