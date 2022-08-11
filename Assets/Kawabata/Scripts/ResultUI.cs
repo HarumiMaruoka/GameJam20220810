@@ -25,7 +25,7 @@ public class ResultUI : MonoBehaviour
         //‘I‘ð
         if (choiceNum > 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space)) choiceNum--;
+            if (Input.GetKeyDown(KeyCode.W)) choiceNum--;
         }
         if (choiceNum < _choices.Length - 1)
         {
