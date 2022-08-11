@@ -27,7 +27,7 @@ public class FadeManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            SceneManager.LoadScene("ResultScene");
+            //SceneManager.LoadScene("ResultScene");
         }
     }
 
