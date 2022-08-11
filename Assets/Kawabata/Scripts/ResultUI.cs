@@ -37,7 +37,7 @@ public class ResultUI : MonoBehaviour
         }
 
         //ï\é¶
-        _choices[choiceNum].color = Color.yellow;
+        _choices[choiceNum].color = new Color(210,0,0);
         _result.text = "Score:" + score;
 
         //ÉVÅ[ÉìëJà⁄
