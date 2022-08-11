@@ -50,7 +50,7 @@ public class PlayerAnimation : MonoBehaviour
         }
 
 
-        if (level > 1&& _level3Trigger)
+        if (level > 1 && _level3Trigger)
         {
             _level3Trigger = false;
             _ps.Play();
@@ -65,8 +65,10 @@ public class PlayerAnimation : MonoBehaviour
     void AnimationControl(Sprite[] sprite)
     {
         float speedY = _rb.velocity.y;
+        Debug.Log(speedY);
 
-        if (speedY != 0)
+
+        if (Mathf.Abs(speedY) > 0.01)
         {
             if (speedY > _changeUp3)
             {
