@@ -10,6 +10,8 @@ public class PlayerAnimation : MonoBehaviour
     [Header("レベルが変化するスコア数"),SerializeField] int _levelUpScore = 10;
     [Header("Animationが変わる上方向のスピード"),SerializeField] float _changeUp = 0.2f;
 
+    [SerializeField] Sprite[] _charactor; 
+
 
     void Start()
     {

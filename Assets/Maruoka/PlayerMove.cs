@@ -22,10 +22,17 @@ public class PlayerMove : MonoBehaviour
         Initialized();
     }
 
+
+    void FixedUpdate()
+    {
+        Update_PlayerMove();
+    }
+
+
     void Update()
     {
         Input_PlayerMove();
-        Update_PlayerMove();
+        
         if (Input.GetKey(KeyCode.W))
         {
             Debug.Log("aaa");

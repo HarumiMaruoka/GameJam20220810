@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce96cac65775dd543b7677ebeea4e790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upForce: 10
+  upForce: 15
   sideSpeed: 6
 --- !u!50 &1618930334
 Rigidbody2D:
@@ -487,6 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelUpScore: 10
   _changeUp: -0.9
+  _charactor: []
 --- !u!1001 &1627739812
 PrefabInstance:
   m_ObjectHideFlags: 0
