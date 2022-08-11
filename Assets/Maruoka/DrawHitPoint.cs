@@ -8,7 +8,6 @@ public class DrawHitPoint : MonoBehaviour
     [Header("ハートのスプライト : プレハブ"), SerializeField] GameObject _heartSpritePrefab;
     PlayerContact _playerHitPoint;
     [Header("playerのタグ"), SerializeField] string _playerTagName;
-    [Header("ハートを置く場所 : このオブジェクトの子にハートを生成する。layout groupを持つので"), SerializeField] Transform _placeToPutHeart;
 
     void Start()
     {
@@ -16,12 +15,35 @@ public class DrawHitPoint : MonoBehaviour
         //ハートを生成する。
         for (int i = 0; i < _playerHitPoint._hitPoint; i++)
         {
-
+            Instantiate(_heartSpritePrefab, transform);
         }
+    }
+
+
+    private void OnEnable()
+    {
+
     }
 
     void Update()
     {
+        if (transform.childCount != _playerHitPoint._hitPoint)
+        {
+            if (transform.childCount < _playerHitPoint._hitPoint)
+            {
+                for (int i = 0; i < Mathf.Abs(transform.childCount - _playerHitPoint._hitPoint); i++)
+                {
+                    Instantiate(_heartSpritePrefab, transform);
+                }
+            }
 
+            else if (transform.childCount > _playerHitPoint._hitPoint)
+            {
+                for (int i = 0; i < Mathf.Abs(transform.childCount - _playerHitPoint._hitPoint); i++)
+                {
+                    Destroy(transform.GetChild(i).gameObject);
+                }
+            }
+        }
     }
 }

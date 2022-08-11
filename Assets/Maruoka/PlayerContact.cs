@@ -14,10 +14,22 @@ public class PlayerContact : MonoBehaviour
     [Header("リザルトシーンの名前"), SerializeField] string _resultSceneName;
 
     [Header("最初のヒットポイント"), SerializeField] public int _hitPoint;
+    [Header("最初のヒットポイント"), SerializeField] public int _firstHitPoint;
     [Header("ゴッドモード"), SerializeField] bool _isGodMode;
 
     [Header("エネミーヒット後のゴッドモード時間"), SerializeField] float _godModeTime;
     [Header("スコアアイテム取得時のスコア"), SerializeField] int _scoreItemsScore;
+
+    private void Start()
+    {
+        _hitPoint = _firstHitPoint;
+        Debug.Log("dskljfdl");
+    }
+
+    private void OnEnable()
+    {
+        
+    }
 
     // 何かに衝突したときに呼ばれるメッセージ
     private void OnCollisionEnter2D(Collision2D collision)

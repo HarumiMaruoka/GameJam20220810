@@ -27,6 +27,5 @@ public class CameraController : MonoBehaviour
             transform.position = new Vector3(endPosX.position.x, 0, transform.position.z);
             isCamJudge = true;
         }
-        Debug.Log(transform.position);
     }
 }

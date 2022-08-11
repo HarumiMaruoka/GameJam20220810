@@ -32,11 +32,6 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Input_PlayerMove();
-        
-        if (Input.GetKey(KeyCode.W))
-        {
-            Debug.Log("aaa");
-        }
     }
 
 
