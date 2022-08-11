@@ -46,11 +46,13 @@ public class ResultUI : MonoBehaviour
             if (choiceNum == 0)
             {
                 //タイトルへ
+                ScoreManager._score = 0;
                 SceneManager.LoadScene("TitleScene");
             }
             else if (choiceNum == 1)
             {
                 //リスタート
+                ScoreManager._score = 0;
                 SceneManager.LoadScene(TitleScripts._sceneName);
             }
         }
