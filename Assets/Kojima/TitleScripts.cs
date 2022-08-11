@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleScripts : MonoBehaviour
 {
-    static string _sceneName;
+    public static string _sceneName;
     [Header("メインシーン名"), SerializeField] string _stage1Name;
     [Header("メインシーン名"), SerializeField] string _stage2Name;
     //スタートボタンを選択で実行
