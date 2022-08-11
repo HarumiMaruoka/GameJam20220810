@@ -5,65 +5,72 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     Rigidbody2D _rb;
-    Animator _animator;  
+    SpriteRenderer _sr;
 
-    [Header("レベルが変化するスコア数"),SerializeField] int _levelUpScore = 10;
-    [Header("Animationが変わる上方向のスピード"),SerializeField] float _changeUp = 0.2f;
+    [Header("レベルが変化するスコア数"), SerializeField] int _levelUpScore = 10;
+    [Header("Animationが変わる上方向のスピード1"), SerializeField] float _changeUp1 = -0.8f;
+    [Header("Animationが変わる上方向のスピード2"), SerializeField] float _changeUp2 = -0.5f;
+    [Header("Animationが変わる上方向のスピード3"), SerializeField] float _changeUp3 = -0.2f;
 
-    [SerializeField] Sprite[] _charactor; 
+    [SerializeField] Sprite[] _level1;
+    [SerializeField] Sprite[] _level2;
+    [SerializeField] Sprite[] _level3;
+
+    [Header("クッキーのパーティクル"), SerializeField] GameObject[] _particle;
+
+    bool _isChange;
 
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
-
-        _animator.Play("FlyOne");
+        _sr = GetComponent<SpriteRenderer>();
     }
 
 
     void Update()
     {
-        if (_animator)
-        {
-            AnimationControl();
-        }
-    }
-
-    void AnimationControl()
-    {
-        float speedY = _rb.velocity.y;
         int level = ScoreManager._score / _levelUpScore;
 
-        if ((speedY > _changeUp && speedY != 0) || Input.GetKey(KeyCode.W))
+        if (level > 1)
         {
-            if (level > 1)
-            {
-                _animator.Play("UpThree");
-            }
-            else if (level > 0)
-            {
-                _animator.Play("UpTwo");
-            }
-            else
-            {
-                _animator.Play("UpOne");
-            }        
+            
+            AnimationControl(_level3);
+        }
+        else if (level > 0)
+        {
+
+            AnimationControl(_level2);
         }
         else
         {
-            if (level > 1)
+            AnimationControl(_level1);
+        }
+    }
+
+    void AnimationControl(Sprite[] sprite)
+    {
+        float speedY = _rb.velocity.y;
+        Debug.Log(speedY);
+
+        if (speedY != 0)
+        {
+            if (speedY > _changeUp3)
             {
-                _animator.Play("FlyThree");
+                _sr.sprite = sprite[3];
             }
-            else if (level > 0)
+            else if (speedY > _changeUp2 || Input.GetKey(KeyCode.W))
             {
-                _animator.Play("FlyTwo");
+                _sr.sprite = sprite[2];
             }
-            else
+            else if (speedY > _changeUp1)
             {
-                _animator.Play("FlyOne");
+                _sr.sprite = sprite[1];
             }
+        }
+        else
+        {
+            _sr.sprite = sprite[0];
         }
     }
 }
