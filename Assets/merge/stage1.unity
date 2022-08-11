@@ -957,6 +957,10 @@ PrefabInstance:
       propertyPath: _levelUpScore
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 4798024475830318308, guid: 40edbd8b70ce44549b6be307df1d93c6, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40edbd8b70ce44549b6be307df1d93c6, type: 3}
 --- !u!1 &817893653
@@ -2827,6 +2831,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 127783169}
+    - target: {fileID: 3329155179681960339, guid: f19e06bc1b1a42644bba2b2ac07e0f75, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 3329155179681960366, guid: f19e06bc1b1a42644bba2b2ac07e0f75, type: 3}
       propertyPath: m_Name
       value: BackGround
