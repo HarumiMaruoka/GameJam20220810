@@ -7,11 +7,20 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/merge/TitleScene.unity
-    guid: 77b4106d64518d6408c6aaf10907a1e8
+    guid: 448eb2e898657ce4a8ce221f2307f91b
   - enabled: 1
     path: Assets/merge/ResultScene.unity
-    guid: ce5f7934f869a0146b8241b6a1a3f101
+    guid: 58f006896fbc6054694075d0a7b7084e
   - enabled: 1
     path: Assets/merge/stage1.unity
+    guid: ba4c1867f1ef066488d93a7ee6f9e58b
+  - enabled: 1
+    path: Assets/merge/stage2.unity
     guid: 7154d7a6a0adb024a88bf9f89f190f4c
+  - enabled: 1
+    path: Assets/merge/stage3.unity
+    guid: dc926cc72b3c3c64bace5d2b68e1101c
+  - enabled: 1
+    path: Assets/merge/GameExplanScene.unity
+    guid: 9388abb71328a4f48aa75c41c8ec69af
   m_configObjects: {}

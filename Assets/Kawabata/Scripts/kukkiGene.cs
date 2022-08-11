@@ -8,7 +8,7 @@ public class kukkiGene : MonoBehaviour
     [Header("クッキーたち"), SerializeField]
     GameObject[] _cookies;
     float num;
-    float span = 0.05f;
+    [SerializeField] float span = 0.05f;
     float time = 0;
     float timecount = 0;
 
@@ -21,10 +21,10 @@ public class kukkiGene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timecount >2.0f)
-        {
-            return;
-        }
+        //if(timecount >2.0f)
+        //{
+        //    return;
+        //}
         time += Time.deltaTime;
         if(time > span)
         {

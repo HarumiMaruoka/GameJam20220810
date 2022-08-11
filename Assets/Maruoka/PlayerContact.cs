@@ -13,7 +13,7 @@ public class PlayerContact : MonoBehaviour
     [Header("回復アイテムのタグの名前"), SerializeField] string _healItemTagName;
     [Header("リザルトシーンの名前"), SerializeField] string _resultSceneName;
 
-    [Header("最初のヒットポイント"), SerializeField] public int _hitPoint;
+    [Header("現在のヒットポイント"), SerializeField] public int _hitPoint;
     [Header("最初のヒットポイント"), SerializeField] public int _firstHitPoint;
     [Header("ゴッドモード"), SerializeField] bool _isGodMode;
 

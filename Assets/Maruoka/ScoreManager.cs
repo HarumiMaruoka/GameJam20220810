@@ -6,12 +6,16 @@ using UnityEngine.UI;
 /// <summary> ただのスコアマネージャー </summary>
 public class ScoreManager : MonoBehaviour
 {
-    public GameObject scoreObj= null;
     static public int _score = 0;
+    Text scoreText;
+
+    private void Start()
+    {
+        scoreText = GetComponent<Text>();
+    }
 
     void Update()
     {
-       Text scoreText = scoreObj.GetComponent<Text>();
-        scoreText.text = "SCORE:" + _score;
+        scoreText.text = "SCORE : " + _score;
     }
 }
