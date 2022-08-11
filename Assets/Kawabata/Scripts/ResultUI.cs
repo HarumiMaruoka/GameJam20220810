@@ -10,6 +10,7 @@ public class ResultUI : MonoBehaviour
     Text _result;
     [SerializeField]
     Text[] _choices;
+
     int choiceNum = 0;
     //メインシーンから受け取るスコア変数(仮)
     int score = ScoreManager._score;
@@ -21,30 +22,49 @@ public class ResultUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(choiceNum　> 0)
+        //選択
+        if (choiceNum > 0)
         {
-            if(Input.GetKeyDown(KeyCode.W)) choiceNum--;
+            if (Input.GetKeyDown(KeyCode.W)) choiceNum--;
         }
-        if(choiceNum < _choices.Length - 1)
+        if (choiceNum < _choices.Length - 1)
         {
             if (Input.GetKeyDown(KeyCode.S)) choiceNum++;
         }
-        foreach(Text choice in _choices)
+        foreach (Text choice in _choices)
         {
             choice.color = Color.black;
         }
+
+        //表示
         _choices[choiceNum].color = Color.yellow;
         _result.text = "Score:" + score;
 
+        //シーン遷移
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if(choiceNum == 0)
+            if (choiceNum == 0)
             {
+                //タイトルへ
                 SceneManager.LoadScene("TitleScene");
-            }else if(choiceNum == 1)
+            }
+            else if (choiceNum == 1)
             {
-                SceneManager.LoadScene("MainScene");
+                //リスタート
+                SceneManager.LoadScene(TitleScripts._sceneName);
             }
         }
+    }
+
+    //タイトルに戻るボタンで実行
+    public void GoTitle()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
+
+    //再挑戦ボタンで実行
+    public void GoMain()
+    {
+        SceneManager.LoadScene(TitleScripts._sceneName);
     }
 }
