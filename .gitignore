@@ -60,3 +60,6 @@ crashlytics-build.properties
 
 UserSettings/
 .vsconfig
+ProjectSettings/BurstAotSettings_StandaloneWindows.json
+ProjectSettings/CommonBurstAotSettings.json
+Assets/StreamingAssets.meta
