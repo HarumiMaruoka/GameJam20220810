@@ -45,7 +45,7 @@ public class PlayerMove : MonoBehaviour
     /// <summary> “ü—Í </summary>
     private void Input_PlayerMove()
     {
-        _inputY = Input.GetKey(KeyCode.W) ? 1 : 0;  //ã¸
+        _inputY = Input.GetKey(KeyCode.Space) ? 1 : 0;  //ã¸
         _inputX = Input.GetAxis("Horizontal");      //¶‰EˆÚ“®
     }
 

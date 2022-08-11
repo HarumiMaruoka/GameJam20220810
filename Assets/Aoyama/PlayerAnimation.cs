@@ -72,7 +72,7 @@ public class PlayerAnimation : MonoBehaviour
             {
                 _sr.sprite = sprite[3];
             }
-            else if (speedY > _changeUp2 || Input.GetKey(KeyCode.W))
+            else if (speedY > _changeUp2 || Input.GetKey(KeyCode.Space))
             {
                 _sr.sprite = sprite[2];
             }
