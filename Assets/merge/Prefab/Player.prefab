@@ -161,7 +161,7 @@ MonoBehaviour:
   _healItemTagName: HealItem
   _resultSceneName: ResultScene
   _hitPoint: 0
-  _firstHitPoint: 99
+  _firstHitPoint: 5
   _isGodMode: 0
   _godModeTime: 1
   _scoreItemsScore: 10
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8c6c9ff860b074ea526c8f84472f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelUpScore: 10
+  _levelUpScore: 50
   _changeUp1: -0.6
   _changeUp2: -0.3
   _changeUp3: 0.2

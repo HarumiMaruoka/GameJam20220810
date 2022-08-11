@@ -955,7 +955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4798024475830318307, guid: 40edbd8b70ce44549b6be307df1d93c6, type: 3}
       propertyPath: _levelUpScore
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4798024475830318308, guid: 40edbd8b70ce44549b6be307df1d93c6, type: 3}
       propertyPath: m_SortingOrder
