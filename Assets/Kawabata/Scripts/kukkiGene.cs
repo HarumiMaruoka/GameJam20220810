@@ -26,11 +26,11 @@ public class kukkiGene : MonoBehaviour
         //    return;
         //}
         time += Time.deltaTime;
-        if(time > span)
+        if(time > timecount)
         {
             timecount = time + span;
-            var id = Random.Range(0, _cookies.Length);
-            if (id < _cookies.Length && id > 0)
+            int id = Random.Range(0, _cookies.Length);
+            if (id < _cookies.Length && id >= 0)
             {
                 var x = Random.Range(-8, 9);
                 var y = Random.Range(5, 9);
