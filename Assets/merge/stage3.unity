@@ -1140,9 +1140,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 702076577406233323, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 095ef5caebaba2046b347a285d1ea370, type: 3}
     - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1191,6 +1203,10 @@ PrefabInstance:
     - target: {fileID: 4294127075041087593, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
       propertyPath: m_TagString
       value: HealItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619846272537870321, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_Radius
+      value: 1.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
@@ -2199,7 +2215,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55345e84dbbbd344ca05cdd516258c2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2242,14 +2258,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3, y: 4}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.62, y: 3.56}
   m_EdgeRadius: 0
 --- !u!4 &1187692831 stripped
 Transform:
@@ -2900,9 +2916,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 702076577406233323, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 095ef5caebaba2046b347a285d1ea370, type: 3}
     - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2951,6 +2979,10 @@ PrefabInstance:
     - target: {fileID: 4294127075041087593, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
       propertyPath: m_TagString
       value: HealItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619846272537870321, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_Radius
+      value: 1.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
@@ -3590,9 +3622,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 702076577406233323, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 095ef5caebaba2046b347a285d1ea370, type: 3}
     - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3046046439240295402, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3641,6 +3685,10 @@ PrefabInstance:
     - target: {fileID: 4294127075041087593, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
       propertyPath: m_TagString
       value: HealItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619846272537870321, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
+      propertyPath: m_Radius
+      value: 1.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88a3cc474d6c406418dccbd619018367, type: 3}
