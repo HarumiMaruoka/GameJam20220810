@@ -9,10 +9,17 @@ public class FadeManager : MonoBehaviour
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        if (FindObjectsOfType<FadeManager>().Length > 2)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
 
-        FadeIn();
-        SceneManager.sceneLoaded += SceneLoaded;
+            FadeIn();
+            SceneManager.sceneLoaded += SceneLoaded;
+        }
     }
 
 
@@ -29,6 +36,7 @@ public class FadeManager : MonoBehaviour
     {
         FadeIn();
     }
+
 
     void FadeIn()
     {
